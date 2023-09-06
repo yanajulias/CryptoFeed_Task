@@ -1,4 +1,4 @@
-package com.hightech.cryptoapp.crypto.feed.db
+package aej.android.enthusiast.frameworks.database
 
 import androidx.room.Dao
 import androidx.room.Query
