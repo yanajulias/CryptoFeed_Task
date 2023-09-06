@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "CryptoFeed"
 include(":app")
+include(":app:domain")
+include(":app:frameworks")
+include(":app:features")
