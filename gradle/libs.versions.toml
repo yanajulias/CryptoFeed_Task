@@ -1,7 +1,8 @@
 [versions]
 # Plugin
-androidGradlePlugin= "8.0.0"
-kotlinAndroid= "1.8.20"
+androidGradlePlugin = "8.0.0"
+kotlinAndroid = "1.8.20"
+ksp = "1.8.20-1.0.11"
 
 coreKtx = "1.10.1"
 lifecycleRuntimeKtx = "2.6.1"
@@ -11,7 +12,7 @@ activityCompose = "1.5.1"
 composeBom = "2023.08.00"
 androidxLifecycle = "2.5.1"
 runtimeTracing = "1.0.0-alpha01"
-navigation= "2.7.1"
+navigation = "2.7.1"
 
 # Testing
 junit = "4.13.2"
@@ -23,6 +24,9 @@ retrofit = "2.9.0"
 moshi = "1.14.0"
 loggingInterceptor = "4.11.0"
 
+#room
+room = "2.5.2"
+
 # Image Loader
 coil = "2.4.0"
 
@@ -33,6 +37,7 @@ dagger = "2.48"
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinAndroid" }
+android-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -42,7 +47,7 @@ lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtim
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
 activity-compose = { group = "androidx.activity", name = "activity-compose" }
 ui = { group = "androidx.compose.ui", name = "ui" }
-ui-graphics= { group = "androidx.compose.ui", name = "ui-graphics" }
+ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
 material = { group = "androidx.compose.material", name = "material" }
@@ -56,10 +61,10 @@ navigation-runtime-ktx = { module = "androidx.navigation:navigation-runtime-ktx"
 
 # Testing
 junit = { group = "junit", name = "junit", version.ref = "junit" }
-ext-junit= { group = "androidx.test.ext", name = "junit", version.ref = "extJunit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "extJunit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
-ui-test-manifest= { module = "androidx.compose.ui:ui-test-manifest" }
+ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 
 # Http
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
@@ -68,9 +73,15 @@ converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.r
 okhttp = { module = "com.squareup.okhttp3:okhttp" }
 logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
 
+#room
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+
 # Image Loader
 coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 
 # Dependency Injection
 dagger-android = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+androidx-room-common = { group = "androidx.room", name = "room-common", version = "2.5.2" }
