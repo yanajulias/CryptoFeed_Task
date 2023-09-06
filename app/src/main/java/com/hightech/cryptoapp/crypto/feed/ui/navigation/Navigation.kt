@@ -1,24 +1,18 @@
 package com.hightech.cryptoapp.crypto.feed.ui.navigation
 
-import android.util.Log
-import androidx.compose.runtime.Composable
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
+import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.hightech.cryptoapp.crypto.feed.di.CryptoFeedComponent
-import com.hightech.cryptoapp.crypto.feed.domain.CryptoFeedItem
-import com.hightech.cryptoapp.crypto.feed.presentation.CryptoFeedViewModel
+import com.hightech.cryptoapp.crypto.feed.domain.model.CryptoFeedItem
 import com.hightech.cryptoapp.crypto.feed.ui.CryptoFeedRoute
-import com.hightech.cryptoapp.main.factories.MainComponent
+import com.hightech.cryptoapp.main.factories.ViewModelFactory
 
 const val cryptoGraphRoute = "crypto_graph_route"
 const val cryptoFeedRoute = "crypto_feed_route"
 
 fun NavGraphBuilder.cryptoGraph(
-    mainComponent: MainComponent,
     onCryptoClick: (CryptoFeedItem) -> Unit,
     nestedGraphs: NavGraphBuilder.() -> Unit,
 ) {
@@ -29,14 +23,9 @@ fun NavGraphBuilder.cryptoGraph(
         composable(
             route = cryptoFeedRoute
         ) {
-            val cryptoFeedViewModel: CryptoFeedViewModel = viewModel {
-                mainComponent.cryptoFeedComponent().create().cryptoFeedViewModel()
-            }
-
-            Log.d("INSTANCE OF 1", "$cryptoFeedViewModel")
-
+            val context = LocalContext.current
             CryptoFeedRoute(
-                viewModel = cryptoFeedViewModel,
+                viewModel = viewModel(factory = ViewModelFactory.provideViewModel(context)),
                 onNavigateToCryptoDetails = onCryptoClick
             )
         }
