@@ -13,7 +13,6 @@ import com.hightech.cryptoapp.main.factories.navigation.MainAppNavHost
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val mainComponent = (application as MainApplication).mainComponent
 
         setContent {
             CryptoAppTheme {
@@ -21,7 +20,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
-                    MainAppNavHost(mainComponent = mainComponent)
+                    MainAppNavHost()
                 }
             }
         }
