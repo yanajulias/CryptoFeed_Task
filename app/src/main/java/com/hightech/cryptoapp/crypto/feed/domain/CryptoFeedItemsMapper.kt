@@ -1,5 +1,9 @@
 package com.hightech.cryptoapp.crypto.feed.domain
 
+import com.hightech.cryptoapp.crypto.feed.domain.model.CoinInfoItem
+import com.hightech.cryptoapp.crypto.feed.domain.model.CryptoFeedItem
+import com.hightech.cryptoapp.crypto.feed.domain.model.RawItem
+import com.hightech.cryptoapp.crypto.feed.domain.model.UsdItem
 import com.hightech.cryptoapp.crypto.feed.http.RemoteCryptoFeedItem
 
 class CryptoFeedItemsMapper {

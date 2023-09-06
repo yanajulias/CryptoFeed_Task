@@ -1,5 +1,6 @@
-package com.hightech.cryptoapp.crypto.feed.domain
+package com.hightech.cryptoapp.crypto.feed.domain.usecases
 
+import com.hightech.cryptoapp.crypto.feed.domain.model.CryptoFeedItem
 import kotlinx.coroutines.flow.Flow
 
 sealed class CryptoFeedResult {

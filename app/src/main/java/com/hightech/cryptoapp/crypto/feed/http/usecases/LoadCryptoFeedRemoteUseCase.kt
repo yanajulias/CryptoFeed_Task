@@ -2,18 +2,18 @@ package com.hightech.cryptoapp.crypto.feed.http.usecases
 
 import android.util.Log
 import com.hightech.cryptoapp.crypto.feed.domain.CryptoFeedItemsMapper
-import com.hightech.cryptoapp.crypto.feed.domain.CryptoFeedLoader
-import com.hightech.cryptoapp.crypto.feed.domain.CryptoFeedResult
+import com.hightech.cryptoapp.crypto.feed.domain.usecases.CryptoFeedLoader
+import com.hightech.cryptoapp.crypto.feed.domain.usecases.CryptoFeedResult
 import com.hightech.cryptoapp.crypto.feed.http.ConnectivityException
 import com.hightech.cryptoapp.crypto.feed.http.CryptoFeedHttpClient
 import com.hightech.cryptoapp.crypto.feed.http.HttpClientResult
 import com.hightech.cryptoapp.crypto.feed.http.InvalidDataException
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import javax.inject.Inject
 
-class RemoteCryptoFeedLoader @Inject constructor(private val cryptoFeedHttpClient: CryptoFeedHttpClient):
-    CryptoFeedLoader {
+class LoadCryptoFeedRemoteUseCase(
+    private val cryptoFeedHttpClient: CryptoFeedHttpClient
+) : CryptoFeedLoader {
     override fun load(): Flow<CryptoFeedResult> = flow {
         cryptoFeedHttpClient.get().collect { result ->
             when (result) {
