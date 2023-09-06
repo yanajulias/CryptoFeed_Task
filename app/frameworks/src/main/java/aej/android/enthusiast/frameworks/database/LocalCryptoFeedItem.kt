@@ -1,28 +1,21 @@
-package com.hightech.cryptoapp.crypto.feed.db
+package aej.android.enthusiast.frameworks.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.hightech.cryptoapp.crypto.feed.domain.model.CoinInfoItem
-import com.hightech.cryptoapp.crypto.feed.domain.model.CryptoFeedItem
-import com.hightech.cryptoapp.crypto.feed.domain.model.RawItem
-import com.hightech.cryptoapp.crypto.feed.domain.model.UsdItem
+import aej.android.enthusiast.domain.model.CoinInfoItem
+import aej.android.enthusiast.domain.model.CryptoFeedItem
+import aej.android.enthusiast.domain.model.RawItem
+import aej.android.enthusiast.domain.model.UsdItem
 
 @Entity(tableName = "local_cryptofeed")
 data class LocalCryptoFeedItem(
-    @PrimaryKey
-    @ColumnInfo(name = "id")
-    val id: String,
-    @ColumnInfo(name = "name")
-    val name: String?,
-    @ColumnInfo(name = "full_name")
-    val fullName: String?,
-    @ColumnInfo(name = "image_url")
-    val imageUrl: String?,
-    @ColumnInfo(name = "price")
-    val price: Double?,
-    @ColumnInfo(name = "changepctday")
-    val changePctDay: Float?
+    @PrimaryKey @ColumnInfo(name = "id") val id: String,
+    @ColumnInfo(name = "name") val name: String?,
+    @ColumnInfo(name = "full_name") val fullName: String?,
+    @ColumnInfo(name = "image_url") val imageUrl: String?,
+    @ColumnInfo(name = "price") val price: Double?,
+    @ColumnInfo(name = "changepctday") val changePctDay: Float?
 ) {
     companion object {
         fun List<CryptoFeedItem>.fromDomain(): List<LocalCryptoFeedItem> {
@@ -47,13 +40,11 @@ data class LocalCryptoFeedItem(
             )
             val rawItem = RawItem(
                 usd = UsdItem(
-                    price = this.price ?: 0.0,
-                    changePctDay = this.changePctDay ?: 0F
+                    price = this.price ?: 0.0, changePctDay = this.changePctDay ?: 0F
                 )
             )
             return CryptoFeedItem(
-                coinInfo = coinInfoItem,
-                raw = rawItem
+                coinInfo = coinInfoItem, raw = rawItem
             )
         }
     }

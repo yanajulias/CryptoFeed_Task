@@ -1,4 +1,4 @@
-package com.hightech.cryptoapp.frameworks
+package aej.android.enthusiast.frameworks
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory

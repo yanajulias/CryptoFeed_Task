@@ -1,11 +1,11 @@
-package com.hightech.cryptoapp.frameworks
+package aej.android.enthusiast.frameworks
 
+import aej.android.enthusiast.frameworks.database.CryptoFeedDao
+import aej.android.enthusiast.frameworks.database.LocalCryptoFeedItem
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.hightech.cryptoapp.crypto.feed.db.CryptoFeedDao
-import com.hightech.cryptoapp.crypto.feed.db.LocalCryptoFeedItem
 
 class DbFactory {
     @Database(

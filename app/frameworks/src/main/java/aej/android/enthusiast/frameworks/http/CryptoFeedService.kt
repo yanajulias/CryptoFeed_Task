@@ -1,4 +1,4 @@
-package com.hightech.cryptoapp.crypto.feed.http
+package aej.android.enthusiast.frameworks.http
 
 import retrofit2.http.GET
 import retrofit2.http.Query

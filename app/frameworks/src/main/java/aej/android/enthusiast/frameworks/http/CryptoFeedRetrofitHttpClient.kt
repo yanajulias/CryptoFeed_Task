@@ -1,13 +1,13 @@
-package com.hightech.cryptoapp.crypto.feed.http
+package aej.android.enthusiast.frameworks.http
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import retrofit2.HttpException
-import java.io.IOException
-import javax.inject.Inject
 
-class CryptoFeedRetrofitHttpClient @Inject constructor(
+import java.io.IOException
+
+class CryptoFeedRetrofitHttpClient(
     private val cryptoFeedService: CryptoFeedService
 ): CryptoFeedHttpClient {
     override fun get(): Flow<HttpClientResult> = flow {
