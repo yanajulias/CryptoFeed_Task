@@ -1,4 +1,4 @@
-package com.hightech.cryptoapp.theme
+package aej.android.enthusiast.features.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -1,20 +1,18 @@
-package com.hightech.cryptoapp.crypto.feed.presentation
+package aej.android.enthusiast.features.cryptofeedlist.presentation
 
+import aej.android.enthusiast.domain.model.CryptoFeedItem
+import aej.android.enthusiast.domain.usecases.CryptoFeedLoader
+import aej.android.enthusiast.frameworks.http.usecases.Connectivity
+import aej.android.enthusiast.frameworks.http.usecases.InvalidData
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.hightech.cryptoapp.crypto.feed.domain.model.CryptoFeedItem
-import com.hightech.cryptoapp.crypto.feed.domain.usecases.CryptoFeedLoader
-import com.hightech.cryptoapp.crypto.feed.domain.usecases.CryptoFeedResult
-import com.hightech.cryptoapp.crypto.feed.http.usecases.Connectivity
-import com.hightech.cryptoapp.crypto.feed.http.usecases.InvalidData
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 sealed interface CryptoFeedUiState {
     val isLoading: Boolean
@@ -53,7 +51,7 @@ data class CryptoFeedViewModelState(
         }
 }
 
-class CryptoFeedViewModel @Inject constructor(
+class CryptoFeedViewModel (
     private val cryptoFeedLoader: CryptoFeedLoader
 ) : ViewModel() {
     private val viewModelState = MutableStateFlow(
@@ -81,12 +79,12 @@ class CryptoFeedViewModel @Inject constructor(
                 Log.d("loadCryptoFeed", "$result")
                 viewModelState.update {
                     when (result) {
-                        is CryptoFeedResult.Success -> it.copy(
+                        is aej.android.enthusiast.domain.usecases.CryptoFeedResult.Success -> it.copy(
                             cryptoFeeds = result.cryptoFeedItems,
                             isLoading = false
                         )
 
-                        is CryptoFeedResult.Failure -> it.copy(
+                        is aej.android.enthusiast.domain.usecases.CryptoFeedResult.Failure -> it.copy(
                             failed = when (result.throwable) {
                                 is Connectivity -> "Connectivity"
                                 is InvalidData -> "Invalid Data"

@@ -1,4 +1,4 @@
-package com.hightech.cryptoapp.theme
+package aej.android.enthusiast.features.theme
 
 import android.app.Activity
 import android.os.Build

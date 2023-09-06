@@ -1,5 +1,6 @@
-package com.hightech.cryptoapp.crypto.feed.ui
+package aej.android.enthusiast.features
 
+import aej.android.enthusiast.domain.model.CryptoFeedItem
 import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,11 +22,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.hightech.cryptoapp.crypto.feed.domain.model.CryptoFeedItem
-import com.hightech.cryptoapp.crypto.feed.presentation.CryptoFeedUiState
-import com.hightech.cryptoapp.crypto.feed.presentation.CryptoFeedViewModel
-import com.hightech.cryptoapp.crypto.feed.ui.components.CryptoFeedList
-import com.hightech.cryptoapp.theme.Purple40
+import aej.android.enthusiast.features.cryptofeedlist.presentation.CryptoFeedUiState
+import aej.android.enthusiast.features.cryptofeedlist.CryptoFeedList
+import aej.android.enthusiast.features.cryptofeedlist.presentation.CryptoFeedViewModel
+import aej.android.enthusiast.features.theme.Purple40
 
 @Composable
 fun CryptoFeedRoute(

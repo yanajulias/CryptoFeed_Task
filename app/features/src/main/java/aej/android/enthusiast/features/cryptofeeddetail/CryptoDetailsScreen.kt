@@ -1,5 +1,6 @@
-package com.hightech.cryptoapp.crypto.details
+package aej.android.enthusiast.features.cryptofeeddetail
 
+import aej.android.enthusiast.features.theme.Purple40
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,7 +18,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.hightech.cryptoapp.theme.Purple40
 
 @Composable
 fun CryptoDetailsRoute(
