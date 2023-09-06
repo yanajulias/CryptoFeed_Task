@@ -1,15 +1,17 @@
 package com.hightech.cryptoapp.main.factories
 
+import com.hightech.cryptoapp.frameworks.HttpFactory
 import com.hightech.cryptoapp.crypto.feed.http.CryptoFeedService
-import dagger.Module
-import dagger.Provides
-import retrofit2.Retrofit
 
-@Module
 class CryptoFeedServiceFactory {
-    @FeatureScope
-    @Provides
-    fun createCryptoFeedService(retrofit: Retrofit): CryptoFeedService {
-        return retrofit.create(CryptoFeedService::class.java)
+    companion object {
+        fun createCryptoFeedService(): CryptoFeedService {
+            return HttpFactory.createRetrofit(
+                HttpFactory.createMoshi(),
+                HttpFactory.createOkhttpClient(
+                    HttpFactory.createLoggingInterceptor()
+                )
+            ).create(CryptoFeedService::class.java)
+        }
     }
 }
