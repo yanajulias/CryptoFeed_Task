@@ -1,4 +1,4 @@
-package com.hightech.cryptoapp.crypto.feed.domain.model
+package aej.android.enthusiast.domain.model
 
 data class CryptoFeedItem(
     val coinInfo: CoinInfoItem,
