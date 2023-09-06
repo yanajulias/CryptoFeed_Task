@@ -1,7 +1,7 @@
 package com.hightech.cryptoapp.main.factories.caching
 
-import com.hightech.cryptoapp.crypto.feed.domain.usecases.CryptoFeedLoader
-import com.hightech.cryptoapp.crypto.feed.domain.usecases.InsertCryptoFeed
+import aej.android.enthusiast.domain.usecases.CryptoFeedLoader
+import aej.android.enthusiast.domain.usecases.InsertCryptoFeed
 import com.hightech.cryptoapp.main.decorators.CryptoFeedCacheDecorator
 
 class CryptoFeedDecoratorFactory {

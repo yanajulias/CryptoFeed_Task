@@ -5,16 +5,15 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.hightech.cryptoapp.crypto.details.navigation.cryptoDetailScreen
-import com.hightech.cryptoapp.crypto.details.navigation.navigateToCryptoDetails
-import com.hightech.cryptoapp.crypto.feed.ui.navigation.cryptoGraph
-import com.hightech.cryptoapp.crypto.feed.ui.navigation.cryptoGraphRoute
+import aej.android.enthusiast.features.cryptofeeddetail.navigation.cryptoDetailScreen
+import aej.android.enthusiast.features.cryptofeeddetail.navigation.navigateToCryptoDetails
+import aej.android.enthusiast.features.cryptofeedlist.navigation.cryptoGraph
 
 @Composable
 fun MainAppNavHost(
     modifier: Modifier = Modifier,
     navHostController: NavHostController = rememberNavController(),
-    startDestination: String = cryptoGraphRoute,
+    startDestination: String = aej.android.enthusiast.features.cryptofeedlist.navigation.cryptoGraphRoute,
 ) {
     NavHost(
         navController = navHostController,

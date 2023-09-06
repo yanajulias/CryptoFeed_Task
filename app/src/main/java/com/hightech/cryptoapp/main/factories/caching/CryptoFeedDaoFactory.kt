@@ -1,8 +1,8 @@
 package com.hightech.cryptoapp.main.factories.caching
 
 import android.content.Context
-import com.hightech.cryptoapp.crypto.feed.db.CryptoFeedDao
-import com.hightech.cryptoapp.frameworks.DbFactory
+import aej.android.enthusiast.frameworks.database.CryptoFeedDao
+import aej.android.enthusiast.frameworks.DbFactory
 
 class CryptoFeedDaoFactory {
     companion object {

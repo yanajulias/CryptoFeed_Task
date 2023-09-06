@@ -1,4 +1,4 @@
-package com.hightech.cryptoapp.crypto.feed.http
+package aej.android.enthusiast.frameworks.http
 
 import kotlinx.coroutines.flow.Flow
 

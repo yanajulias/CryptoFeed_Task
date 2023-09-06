@@ -1,7 +1,7 @@
 package com.hightech.cryptoapp.main.factories
 
-import com.hightech.cryptoapp.crypto.feed.http.CryptoFeedHttpClient
-import com.hightech.cryptoapp.crypto.feed.http.CryptoFeedRetrofitHttpClient
+import aej.android.enthusiast.frameworks.http.CryptoFeedHttpClient
+import aej.android.enthusiast.frameworks.http.CryptoFeedRetrofitHttpClient
 
 class CryptoFeedHttpClientFactory {
     companion object {
