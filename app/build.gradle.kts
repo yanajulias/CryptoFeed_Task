@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.ksp)
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    kotlin("kapt")
 }
 
 android {
@@ -39,7 +38,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.5"
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
     packagingOptions {
         resources {
@@ -82,8 +81,6 @@ dependencies {
 
     implementation(libs.coil)
 
-    implementation(libs.dagger.android)
-    kapt(libs.dagger.compiler)
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)

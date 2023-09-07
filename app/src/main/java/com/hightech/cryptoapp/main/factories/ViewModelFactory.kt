@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
-import aej.android.enthusiast.features.cryptofeedlist.presentation.CryptoFeedViewModel
+import com.hightech.cryptoapp.features.cryptofeedlist.presentation.CryptoFeedViewModel
 import com.hightech.cryptoapp.main.factories.caching.CryptoFeedCompositeFactory
 import com.hightech.cryptoapp.main.factories.caching.CryptoFeedDecoratorFactory
 import com.hightech.cryptoapp.main.factories.caching.CryptoFeedLocalUseCaseFactory

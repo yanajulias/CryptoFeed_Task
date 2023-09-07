@@ -1,10 +1,10 @@
 package com.hightech.cryptoapp.main.factories.caching
 
 import android.content.Context
-import aej.android.enthusiast.frameworks.database.usecases.InsertCryptoFeedUseCase
-import aej.android.enthusiast.frameworks.database.usecases.LoadCryptoFeedLocalUseCase
-import aej.android.enthusiast.domain.usecases.CryptoFeedLoader
-import aej.android.enthusiast.domain.usecases.InsertCryptoFeed
+import com.hightech.cryptoapp.domain.usecases.CryptoFeedLoader
+import com.hightech.cryptoapp.domain.usecases.InsertCryptoFeed
+import com.hightech.cryptoapp.frameworks.database.usecases.InsertCryptoFeedUseCase
+import com.hightech.cryptoapp.frameworks.database.usecases.LoadCryptoFeedLocalUseCase
 
 class CryptoFeedLocalUseCaseFactory {
     companion object {

@@ -1,7 +1,7 @@
 package com.hightech.cryptoapp.main.factories
 
-import aej.android.enthusiast.domain.usecases.CryptoFeedLoader
-import aej.android.enthusiast.frameworks.http.usecases.LoadCryptoFeedRemoteUseCase
+import com.hightech.cryptoapp.domain.usecases.CryptoFeedLoader
+import com.hightech.cryptoapp.frameworks.http.usecases.LoadCryptoFeedRemoteUseCase
 
 class CryptoFeedRemoteLoaderFactory {
     companion object {

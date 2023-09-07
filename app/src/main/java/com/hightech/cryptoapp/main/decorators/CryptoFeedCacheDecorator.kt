@@ -1,8 +1,8 @@
 package com.hightech.cryptoapp.main.decorators
 
-import aej.android.enthusiast.domain.usecases.CryptoFeedLoader
-import aej.android.enthusiast.domain.usecases.CryptoFeedResult
-import aej.android.enthusiast.domain.usecases.InsertCryptoFeed
+import com.hightech.cryptoapp.domain.usecases.CryptoFeedLoader
+import com.hightech.cryptoapp.domain.usecases.CryptoFeedResult
+import com.hightech.cryptoapp.domain.usecases.InsertCryptoFeed
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
